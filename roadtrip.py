@@ -1,32 +1,14 @@
 
 def roadtrip(arr):
     n = len(arr)
-    size = 0
-    last = [n] * n
-
-    i = 0
-    for j in range(i, n-1):
-        d = arr[j] - arr[i]
-        pen = (200-d)*(200-d)
-        if j == n:
-            last[j] = i
-            i = j
-            break
-        else:
-            nextd = arr[j + 1] - arr[i]
-            nextpen = (200-nextd)*(200-nextd)
-            if pen < nextpen:
-                size += 1
-                last[j] = i
-                i = j
-
-    path = size*[]
-    cur = i
+    pen = [[(200-arr[y]-arr[x])*(200-arr[y]-arr[x]) for x in range(n)] for y in range(n)]
+    path = []
     total = 0
-    for j in range(0, size):
-        path[size-j] = cur
-        total += (200 - (arr[last[cur]] - arr[cur])) * (200 - (arr[last[cur]] - arr[cur]))
-        cur = last[cur]
+    last = 0
+    for i in range(0, n):
+        last = 0
+        for j in range(0, n):
+            if pen[i][j]
     return total, path
 
 
