@@ -41,3 +41,12 @@ for the source list (36, 13, 78, 85, 16, 52, 58, 61, 63, 83, 46, 19, 85, 1, 58, 
 #### We want to find out what is the least penalty for a trip from mile post 0 to the hotel #15, at mile post 1350? (And where should you stop to get there?)
 
 #### The solution to this example is penalty = 4050. You should stop at hotels 2, 5, 7, 9, 10, 13, and 15.
+
+## Question 4: Collatz (no coding required)
+
+#### You may remember that we considered the Collatz Conjecture during the AP class last year. This is the one that says that for any positive integer, x, if we repeatedly follow the rule:
+##### if x is even, x → x/2; otherwise, x → 3x + 1
+##### we will eventually arrive at x == 1, and the "Collatz number" is the number of steps it takes to arrive at 1. 
+
+#### You could probably write a method to determine the Collatz number for a positive integer using a "while" loop. You could also do it with a recursive method. But would a dynamic programming method work even better? Explain why, or why not.
+
